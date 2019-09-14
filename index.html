@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="oldIE ie8" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html class="oldIE ie9" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html
+  lang="ru-RU"
+  prefix="og: http://ogp.me/ns#"
+><!--<![endif]-->
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
+      <meta name="lang" content="ru" />
+
+    
+
+
+     
+
+      <title></title>
+      <meta name="robots" content="index, follow" />
+
+      <link
+        href="assets/build/img/favicon.ico"
+        rel="shortcut icon"
+        type="image/x-icon"
+      />
+      <link href="assets/build/css/external.css" rel="stylesheet" />
+      <link href="assets/build/css/internal.css" rel="stylesheet" />
+      <!--[if lte IE 8]>
+        <link rel="stylesheet" href="/assets/build/css/fonts_ie.css?v=1007" />
+      <![endif]-->
+
+      <!-- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов -->
+      <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"
+      ></script>
+      <!-- Для ie10 -->
+      <script>
+        if (/*@cc_on!@*/ false) {
+          document.documentElement.className += " oldIE ie10";
+        }
+      </script>
+
+      <script>
+        // IE 9+
+        var ready = function(fn) {
+          if (typeof fn !== "function") return;
+          if (document.readyState === "complete") return fn();
+          document.addEventListener("DOMContentLoaded", fn, false);
+        };
+      </script>
+
+
+      <script type="text/javascript">
+        window.NREUM || (NREUM = {}),
+          (__nr_require = (function(e, n, t) {
+            function r(t) {
+              if (!n[t]) {
+                var o = (n[t] = { exports: {} });
+                e[t][0].call(
+                  o.exports,
+                  function(n) {
+                    var o = e[t][1][n];
+                    return r(o || n);
+                  },
+                  o,
+                  o.exports
+                );
+              }
+              return n[t].exports;
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r;
+          })(
+            {
+              1: [
+                function(e, n, t) {
+                  function r() {}
+                  function o(e, n, t) {
+                    return function() {
+                      return (
+                        i(
+                          e,
+                          [c.now()].concat(u(arguments)),
+                          n ? null : this,
+                          t
+                        ),
+                        n ? void 0 : this
+                      );
+                    };
+                  }
+                  var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                  "undefined" == typeof window.newrelic && (newrelic = s);
+                  var p = [
+                      "setPageViewName",
+                      "setCustomAttribute",
+                      "setErrorHandler",
+                      "finished",
+                      "addToTrace",
+                      "inlineHit",
+                      "addRelease"
+                    ],
+                    d = "api-",
+                    l = d + "ixn-";
+                  a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api");
+                  }),
+                    (s.addPageAction = o(d + "addPageAction", !0)),
+                    (s.setCurrentRouteName = o(d + "routeName", !0)),
+                    (n.exports = newrelic),
+                    (s.interaction = function() {
+                      return new r().get();
+                    });
+                  var m = (r.prototype = {
+                    createTracer: function(e, n) {
+                      var t = {},
+                        r = this,
+                        o = "function" == typeof n;
+                      return (
+                        i(l + "tracer", [c.now(), e, t], r),
+                        function() {
+                          if (
+                            (f.emit(
+                              (o ? "" : "no-") + "fn-start",
+                              [c.now(), r, o],
+                              t
+                            ),
+                            o)
+                          )
+                            try {
+                              return n.apply(this, arguments);
+                            } catch (e) {
+                              throw (f.emit("fn-err", [arguments, this, e], t),
+                              e);
+                            } finally {
+                              f.emit("fn-end", [c.now()], t);
+                            }
+                        }
+                      );
+                    }
+                  });
+                  a(
+                    "actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(
+                      ","
+                    ),
+                    function(e, n) {
+                      m[n] = o(l + n);
+                    }
+                  ),
+                    (newrelic.noticeError = function(e, n) {
+                      "string" == typeof e && (e = new Error(e)),
+                        i("err", [e, c.now(), !1, n]);
+                    });
+                },
+                {}
+              ],
+              2: [
+                function(e, n, t) {
+                  function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (
+                      var t = i.split("."), r = n.split("."), a = 0;
+                      a < r.length;
+                      a++
+                    )
+                      if (r[a] !== t[a]) return !1;
+                    return !0;
+                  }
+                  var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                  if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                      f = u.match(a);
+                    f &&
+                      u.indexOf("Chrome") === -1 &&
+                      u.indexOf("Chromium") === -1 &&
+                      ((o = "Safari"), (i = f[1]));
+                  }
+                  n.exports = { agent: o, version: i, match: r };
+                },
+                {}
+              ],
+              3: [
+                function(e, n, t) {
+                  function r(e, n) {
+                    var t = [],
+                      r = "",
+                      i = 0;
+                    for (r in e)
+                      o.call(e, r) && ((t[i] = n(r, e[r])), (i += 1));
+                    return t;
+                  }
+                  var o = Object.prototype.hasOwnProperty;
+                  n.exports = r;
+                },
+                {}
+              ],
+              4: [
+                function(e, n, t) {
+                  function r(e, n, t) {
+                    n || (n = 0),
+                      "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (
+                      var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o);
+                      ++r < o;
+
+                    )
+                      i[r] = e[n + r];
+                    return i;
+                  }
+                  n.exports = r;
+                },
+                {}
+              ],
+              5: [
+                function(e, n, t) {
+                  n.exports = {
+                    exists:
+                      "undefined" != typeof window.performance &&
+                      window.performance.timing &&
+                      "undefined" !=
+                        typeof window.performance.timing.navigationStart
+                  };
+                },
+                {}
+              ],
+              ee: [
+                function(e, n, t) {
+                  function r() {}
+                  function o(e) {
+                    function n(e) {
+                      return e && e instanceof r ? e : e ? f(e, u, i) : i();
+                    }
+                    function t(t, r, o, i) {
+                      if (!d.aborted || i) {
+                        e && e(t, r, o);
+                        for (
+                          var a = n(o), u = v(t), f = u.length, c = 0;
+                          c < f;
+                          c++
+                        )
+                          u[c].apply(a, r);
+                        var p = s[y[t]];
+                        return p && p.push([b, t, r, a]), a;
+                      }
+                    }
+                    function l(e, n) {
+                      h[e] = v(e).concat(n);
+                    }
+                    function m(e, n) {
+                      var t = h[e];
+                      if (t)
+                        for (var r = 0; r < t.length; r++)
+                          t[r] === n && t.splice(r, 1);
+                    }
+                    function v(e) {
+                      return h[e] || [];
+                    }
+                    function g(e) {
+                      return (p[e] = p[e] || o(t));
+                    }
+                    function w(e, n) {
+                      c(e, function(e, t) {
+                        (n = n || "feature"), (y[t] = n), n in s || (s[n] = []);
+                      });
+                    }
+                    var h = {},
+                      y = {},
+                      b = {
+                        on: l,
+                        addEventListener: l,
+                        removeEventListener: m,
+                        emit: t,
+                        get: g,
+                        listeners: v,
+                        context: n,
+                        buffer: w,
+                        abort: a,
+                        aborted: !1
+                      };
+                    return b;
+                  }
+                  function i() {
+                    return new r();
+                  }
+                  function a() {
+                    (s.api || s.feature) &&
+                      ((d.aborted = !0), (s = d.backlog = {}));
+                  }
+                  var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = (n.exports = o());
+                  d.backlog = s;
+                },
+                {}
+              ],
+              gos: [
+                function(e, n, t) {
+                  function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys)
+                      try {
+                        return (
+                          Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                          }),
+                          r
+                        );
+                      } catch (i) {}
+                    return (e[n] = r), r;
+                  }
+                  var o = Object.prototype.hasOwnProperty;
+                  n.exports = r;
+                },
+                {}
+              ],
+              handle: [
+                function(e, n, t) {
+                  function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t);
+                  }
+                  var o = e("ee").get("handle");
+                  (n.exports = r), (r.ee = o);
+                },
+                {}
+              ],
+              id: [
+                function(e, n, t) {
+                  function r(e) {
+                    var n = typeof e;
+                    return !e || ("object" !== n && "function" !== n)
+                      ? -1
+                      : e === window
+                      ? 0
+                      : a(e, i, function() {
+                          return o++;
+                        });
+                  }
+                  var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                  n.exports = r;
+                },
+                {}
+              ],
+              loader: [
+                function(e, n, t) {
+                  function r() {
+                    if (!E++) {
+                      var e = (x.info = NREUM.info),
+                        n = l.getElementsByTagName("script")[0];
+                      if (
+                        (setTimeout(s.abort, 3e4),
+                        !(e && e.licenseKey && e.applicationID && n))
+                      )
+                        return s.abort();
+                      c(y, function(n, t) {
+                        e[n] || (e[n] = t);
+                      }),
+                        f("mark", ["onload", a() + x.offset], null, "api");
+                      var t = l.createElement("script");
+                      (t.src = "https://" + e.agent),
+                        n.parentNode.insertBefore(t, n);
+                    }
+                  }
+                  function o() {
+                    "complete" === l.readyState && i();
+                  }
+                  function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api");
+                  }
+                  function a() {
+                    return O.exists && performance.now
+                      ? Math.round(performance.now())
+                      : (u = Math.max(new Date().getTime(), u)) - x.offset;
+                  }
+                  var u = new Date().getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                  NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                  };
+                  var h = "" + location,
+                    y = {
+                      beacon: "bam.nr-data.net",
+                      errorBeacon: "bam.nr-data.net",
+                      agent: "js-agent.newrelic.com/nr-1118.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = (n.exports = {
+                      offset: u,
+                      now: a,
+                      origin: h,
+                      features: {},
+                      xhrWrappable: b,
+                      userAgent: p
+                    });
+                  e(1),
+                    l[m]
+                      ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1))
+                      : (l[v]("onreadystatechange", o), d[v]("onload", r)),
+                    f("mark", ["firstbyte", u], null, "api");
+                  var E = 0,
+                    O = e(5);
+                },
+                {}
+              ]
+            },
+            {},
+            ["loader"]
+          ));
+        NREUM.info = {
+          beacon: "bam.nr-data.net",
+          errorBeacon: "bam.nr-data.net",
+          licenseKey: "e71383f0a9",
+          applicationID: "149372318",
+          sa: 1
+        };
+      </script>
+    </head>
+    <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TMLX7B5"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe
+      ></noscript>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="0"
+        height="0"
+        style="position:absolute"
+      >
+        <symbol id="icon-arrow" viewBox="0 0 8 13">
+          <path
+            d="M.225 11.925l5.3-5.4-5.3-5.4c-.3-.3-.3-.7 0-.9.2-.3.7-.3.9 0l5.7 5.8c.3.3.3.7 0 .9l-5.7 5.8c-.3.3-.7.3-.9 0-.2-.2-.2-.6 0-.8z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-arrows" viewBox="0 0 26 13">
+          <path
+            d="M25.989 6.499l-.698.721-5.582 5.768-.698-.721 5.582-5.768L19.011.731l.698-.72 5.582 5.767.698.721zM6.988 12.267l-.697.721-6.28-6.489L6.291.011l.697.72-5.582 5.768 5.582 5.768z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-check" viewBox="0 0 10.62 7.09">
+          <path
+            d="M10.613.719L4.956 6.376l-.707.707-.707-.707L.007 2.841l.707-.708 3.535 3.536L9.906.012l.707.707z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-cross" viewBox="0 0 27 27">
+          <path
+            fill-rule="evenodd"
+            d="M26.993 25.483l-1.416 1.415L13.546 14.87 1.515 26.898.1 25.483l12.031-12.028L.1 1.428 1.515.013l12.031 12.028L25.577.013l1.416 1.415-12.031 12.027 12.031 12.028z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-cross_sm" viewBox="0 0 7.06 7.06">
+          <path
+            d="M7.065 6.358l-.707.707L3.53 4.237.701 7.065l-.707-.707L2.823 3.53-.006.701l.707-.707L3.53 2.823 6.358-.006l.707.707L4.237 3.53l2.828 2.828z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-discover" viewBox="0 0 43 43">
+          <path
+            d="M36.5 5.383l-2.709 3.26-.26-.214a2.763 2.763 0 0 0-1.172-2.283c-1.648-1.35-3.725-.815-5.212.974-1.457 1.754-1.619 3.915.03 5.264a2.948 2.948 0 0 0 2.517.736l.258.214-.528.636.973.8 7.106-8.557zM28.13 11.7c-1.2-.98-1.066-2.434.029-3.753s2.508-1.723 3.706-.744c1.328 1.087.975 2.617.007 3.781s-2.413 1.8-3.74.715zm13.476 6.768l1.394-.26-.255-1.35-1.391.258zm-1.988.324l-.241-1.274-7.614 1.417.237 1.273zm-4.135 9.742c.451-.647.826-.892 1.366-.634.6.286.634 1.049.2 1.942-.42.866-1.044 1.38-1.755 1.158l-.567 1.169c1.291.431 2.526-.147 3.321-1.782.907-1.869.426-3.165-.737-3.718a1.934 1.934 0 0 0-2.566.824L33.73 28.92c-.576.806-1.1 1.032-1.707.742-.762-.364-.8-1.23-.295-2.274s1.227-1.546 2.07-1.279l.576-1.182c-1.4-.484-2.741.061-3.694 2.026-.907 1.869-.342 3.336.808 3.891a2.267 2.267 0 0 0 3.064-.974l.505-.723zm-13.33 7.493a1.776 1.776 0 0 1 1.455-1.9c1.659-.506 2.765.624 3.221 2.1s.178 2.962-1.5 3.473a1.815 1.815 0 0 1-2.209-.684l-1.248.381a2.987 2.987 0 0 0 3.787 1.382c2.3-.7 3.089-2.745 2.4-4.961-.672-2.172-2.488-3.47-4.795-2.764a3.045 3.045 0 0 0-2.364 3.354zM9.2 38.359a3.747 3.747 0 0 0 5.415-1.325c1.249-1.906 1.062-4.136-.974-5.451a3.757 3.757 0 0 0-5.415 1.324 3.694 3.694 0 0 0 .974 5.449zm3.821-5.83c1.441.932 1.329 2.533.5 3.8s-2.258 2.017-3.7 1.086-1.328-2.533-.5-3.8 2.271-2.012 3.7-1.088zM8.35 24.538l-.321-2.4-8.024-1.549.181 1.343 6.734 1.207.08.619-6.172 2.983.178 1.334zM10.01 8.5a3.4 3.4 0 0 0-4.994.286c-1.527 1.774-1.2 3.858.614 5.392s4.033 1.653 5.6-.168c1.248-1.45 1.2-2.955.359-3.987l-.857 1a1.8 1.8 0 0 1-.366 2.256c-1.038 1.207-2.418 1.12-3.85-.033l3.831-4.453zM5.863 9.54a2 2 0 0 1 2.774-.436l-2.9 3.374a2.162 2.162 0 0 1 .126-2.941zm14.8-7.547l-.576.06a2.8 2.8 0 0 0-2.14 1.147l-.336.034-.1-.91-1.248.13.8 7.649 1.3-.134-.4-3.824a2.319 2.319 0 0 1 1.728-2.8 2.355 2.355 0 0 1 .46-.062l.649-.069z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-intersection" viewBox="0 0 352 224">
+          <circle
+            cx="112"
+            cy="112"
+            r="111.5"
+            stroke="#000"
+            fill="transparent"
+          ></circle>
+          <circle
+            cx="240"
+            cy="112"
+            r="111.5"
+            stroke="#000"
+            fill="#fff"
+          ></circle>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M176 203.925c29.016-20.239 48-53.865 48-91.925 0-38.06-18.984-71.686-48-91.925-29.016 20.24-48 53.865-48 91.925 0 38.06 18.984 71.686 48 91.925z"
+            fill="#000"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-layers" viewBox="0 0 390 440">
+          <path
+            d="M0 253.094l195.094-95.104 195.094 95.104-195.094 97.193L0 253.094z"
+            fill="#000"
+          ></path>
+          <path
+            d="M195.094 291.729L1.131 195.099l193.963-94.552 193.963 94.552-193.963 96.63z"
+            fill="#fff"
+            stroke="#000"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-logo_en" viewBox="0 0 82.5 83">
+          <path
+            d="M79.986 52.575v-1.497c.803-.199 1.204-.798 1.204-1.895 0-1.796-1.405-2.594-3.111-2.594-1.706 0-3.111.798-3.111 2.594 0 1.496.904 2.194 2.309 2.194v-2.294h1.204v3.791h-.903c-2.008 0-3.914-.998-3.914-3.691 0-2.694 1.906-4.091 4.415-4.091 2.509 0 4.416 1.397 4.416 4.091 0 1.796-1.004 3.092-2.509 3.392zm-8.159-15.803l8.26-2.485.407 1.337-8.26 2.485-.407-1.337zm1.736-11.433c.603-.499.603-1.197 0-2.095-.501-.799-1.204-1.197-1.906-.799-.602.4-.502.998-.201 1.597.1.2.502 1.197.602 1.496.402 1.198.402 2.395-.903 3.193-1.104.798-2.81.499-4.014-1.297-1.104-1.696-.903-3.392.301-4.39l.803 1.198c-.803.798-.602 1.695 0 2.593.602.898 1.405 1.297 2.107.798.703-.499.703-1.097.402-1.795l-.603-1.596c-.602-1.198-.401-2.295.703-2.994 1.204-.698 2.709-.399 3.813 1.297 1.004 1.497.803 2.993-.301 3.991l-.803-1.197zm-14.551-7.383l1.204-7.283-.301-.1-3.914 5.089-1.103-.798 5.218-6.785 1.606 1.198-1.104 7.283.2.199 4.015-5.188 1.003.898-5.218 6.784-1.606-1.297zM46.267 3.291l-.602 2.095 3.512 1.097-.401 1.197-3.512-1.097-.803 2.295 4.616 1.496-.401 1.297-6.022-1.995 2.71-8.081 5.82 1.895-.401 1.198-4.516-1.397zm2.208 26.737c0 6.385-13.448 5.188-19.87 12.071 2.408 2.395 6.021 3.791 10.838 4.091 11.039.598 18.365 3.891 18.365 11.473 0 9.378-10.838 19.653-24.587 19.653-16.057 0-28.601-12.67-28.601-28.133 0-15.663 12.745-28.234 28.501-28.234.602 0 1.104.1 1.706.1h.401c.502 0 .903 0 1.405.1 6.322.798 11.842 3.791 11.842 8.879zm-11.44-6.984c-5.018 0-9.534 3.193-10.939 7.582-.301 1.098-.502 2.195-.502 3.392 0 2.494.703 5.288 2.208 7.183 3.512-3.392 7.828-4.888 11.942-6.085 4.717-1.297 7.627-2.694 7.627-5.188 0-3.592-3.613-6.884-10.336-6.884zM29.307.098l6.222-.099v1.296l-4.716.1V3.59h3.713l.1 1.197-3.813.1.1 2.494 4.817-.1v1.297l-6.322.1-.101-8.58zm-8.329 10.176L18.67 7.481c-.201.1-.502.199-.703.299l-1.906.699 1.204 3.192-1.305.499-2.91-8.081 3.713-1.297c1.706-.699 3.111-.1 3.613 1.397.301.897.1 1.795-.502 2.494l2.509 3.092-1.405.499zm-2.007-5.586c-.301-.799-.903-1.098-2.007-.699l-2.108.798.903 2.494 2.108-.798c1.104-.399 1.405-.997 1.104-1.795zM1.208 17.058c-1.606-1.895-1.706-4.29.301-5.986 1.405-1.197 3.011-1.297 4.215-.299l-1.204.998c-.602-.399-1.405-.399-2.208.299-1.405 1.197-1.104 2.794 0 4.09 1.104 1.397 2.609 1.896 4.014.798 1.104-.997 1.104-2.094.201-3.192L4.72 15.262l-.802-.897 2.91-2.395.602.699c1.204 1.496 1.606 3.591-.401 5.287-2.108 1.696-4.416 1.197-5.821-.898zm63.825 57.266l5.721 4.589 1.706-2.095 1.003.798-4.416 5.387-.903-.798 1.706-2.195-5.72-4.489.903-1.197zm5.52-9.179l3.613 1.297 1.404-3.991-3.512-1.296.502-1.397 8.028 2.893-.502 1.397-3.211-1.197-1.505 3.99 3.312 1.197-.502 1.397-8.129-2.893.502-1.397z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-logo_mobile" viewBox="0 0 43.125 46.031">
+          <path
+            d="M28.297 20.662c-3.87-.216-6.853-1.384-8.783-3.346 5.18-5.591 16.12-4.651 16.12-9.861 0-4.177-4.46-6.633-9.642-7.281l-.009-.002a23.19 23.19 0 0 0-1.126-.11c-.106-.008-.21-.018-.318-.025a23.326 23.326 0 0 0-1.351-.043c-12.841 0-23.19 10.33-23.19 23.072 0 12.658 10.215 22.965 23.19 22.965 11.151 0 19.948-8.393 19.948-16.049 0-6.184-5.927-8.824-14.839-9.32zm-.07-9.856c-3.341 1.09-7.11 2.332-9.813 5.123-.917-1.447-1.41-3.189-1.41-5.206 0-.956.147-1.875.418-2.738 1.169-3.612 4.651-5.772 8.679-5.772 3.93 0 7.767 2.297 7.767 5.242 0 1.409-2.131 2.206-5.641 3.351z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-logo_mobile_10" viewBox="0 0 47 31.906">
+          <path
+            d="M36.553 14.355c6.225.399 10.347 2.193 10.447 6.381C47 26.12 40.871 31.9 33.039 31.9a16.058 16.058 0 0 1-16.166-15.85A16.055 16.055 0 0 1 32.838 0h1.305c.3 0 .5.1.8.1 3.615.5 6.727 2.194 6.727 5.085 0 3.589-7.631 2.991-11.246 6.88a9.052 9.052 0 0 0 6.129 2.29zm-.1-6.88c2.41-.8 3.916-1.3 3.916-2.293 0-1.994-2.711-3.589-5.422-3.589a6.053 6.053 0 0 0-6.025 3.988 6.221 6.221 0 0 0-.3 1.894 6.475 6.475 0 0 0 1 3.589c1.91-1.994 4.521-2.791 6.831-3.589zM.1 30.607h7.033V4.085H6.33L0 8.372V6.478l6.229-4.287H8.84v28.416h6.527v1.3H.1v-1.3z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-logo_ru" viewBox="0 0 84 84">
+          <path
+            d="M83.703 63.2c-.499-.099-.998.199-1.197.797-.2.597 0 1.094.498 1.293l-.299.996c-1.097-.398-1.496-1.394-1.097-2.588.399-1.195 1.297-1.891 2.394-1.593l-.299 1.095zm-8.979-17.12l2.294-1.095-.499-3.484-2.494-.398-.299-1.393 8.879 1.493.3 2.289-7.982 4.081-.199-1.493zm3.591-1.692l3.193-1.593-.1-.497-3.492-.598.399 2.688zm-3.392-18.315c.499-.597.499-1.294 0-2.19-.898-1.493-2.594-1.393-3.991-.497-1.396.895-2.195 2.289-1.297 3.782.599.896 1.397 1.194 2.295.896l.798 1.294c-1.496.597-3.093.199-4.19-1.493-1.397-2.19-.599-4.38 1.596-5.773 2.195-1.294 4.49-1.095 5.887 1.094.997 1.494.798 3.086-.3 4.181l-.798-1.294zm-2.394 51.859l.997.895-4.489 5.177-.998-.896 1.796-1.991-5.487-4.778.898-1.095 5.487 4.778 1.796-2.09zM58.062 16.318l1.996-3.185-3.592-2.289-1.995 3.086-1.198-.697 4.69-7.167 1.197.796-1.896 2.887 3.592 2.289 1.895-2.886 1.198.796-4.689 7.167-1.198-.797zM29.928 41.999c2.394 2.389 5.986 3.782 10.775 4.081 10.874.597 18.158 3.882 18.158 11.447 0 9.356-10.775 19.608-24.444 19.608-15.963 0-28.434-12.641-28.434-28.069 0-15.528 12.671-28.169 28.434-28.169.599 0 1.098.1 1.696.1h.399c.499 0 .898 0 1.397.099 6.286.796 11.773 3.783 11.773 8.859 0 6.37-13.369 5.176-19.754 12.044zm8.281-19.012c-4.989 0-9.478 3.186-10.875 7.565-.299 1.095-.499 2.19-.499 3.384 0 2.489.798 5.276 2.195 7.167 3.492-3.384 7.782-4.877 11.872-6.072 4.689-1.294 7.583-2.687 7.583-5.176 0-3.583-3.592-6.868-10.276-6.868zM41.8 9.251l.898-6.569-.299-.1-4.39 6.172-1.995-.299 1.097-8.461 1.397.199-.898 6.57.299.099 4.39-6.171 1.995.299-1.197 8.46-1.297-.199zM21.747 7.062l-2.195.696.998 3.086-1.397.498-2.494-8.162 3.591-1.096c1.796-.597 3.093 0 3.592 1.593.499 1.593-.299 2.787-2.095 3.385zm.798-2.987c-.299-.796-.898-1.194-2.095-.796l-1.996.498.799 2.687 1.995-.597c1.297-.299 1.596-.996 1.297-1.792zM5.584 20.2l-5.587-6.47 4.59-3.981.798.995-3.492 2.986 4.789 5.475-1.098.995zm66.745 43l6.385 1.891.1-.199-5.288-5.375.499-1.891 8.181 2.489-.399 1.294-6.285-1.991-.1.298 5.288 5.375-.599 1.892-8.181-2.489.399-1.294z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-logo_ru_10" viewBox="0 0 87 72">
+          <path
+            d="M80.026 39.966l1.993-.9-.3-2.912-2.093-.4-.2-1.2L86.7 36.25l.2 1.908-6.774 3.012zm2.99-1.305l2.691-1.305v-.4l-2.89-.5zM80.624 22.7a1.519 1.519 0 0 0 .1-1.908c-.7-1.2-2.093-1.2-3.289-.5-1.3.8-1.894 1.908-1.2 3.213a1.716 1.716 0 0 0 1.894.8l.6 1.1a2.755 2.755 0 0 1-3.486-1.305c-1.1-1.908-.3-3.715 1.495-4.82 1.894-1.1 3.787-.8 4.883 1a2.732 2.732 0 0 1-.4 3.514zm-14.052-8.74l1.694-2.611-2.99-2.008-1.694 2.611-1-.7 3.987-5.924 1 .7-1.595 2.41 2.89 1.908 1.595-2.41 1 .7-3.887 5.924zM43.35 35.447c1.894 1.908 4.884 3.113 8.77 3.313 8.87.5 14.75 3.113 14.75 9.539 0 7.631-8.77 16.065-19.833 16.065a23.145 23.145 0 0 1-.3-46.288h1.993c.4 0 .7.1 1.1.1 5.083.7 9.568 3.113 9.568 7.33.002 5.322-10.865 4.318-16.048 9.941zm6.578-15.162a8.832 8.832 0 0 0-8.671 5.824 8.119 8.119 0 0 0-.4 2.711 8.382 8.382 0 0 0 1.495 5.221c2.691-2.811 6.478-4.016 9.767-5.121 3.488-1.2 5.581-2.008 5.581-3.414 0-2.906-3.885-5.22-7.772-5.22zm2.79-12.55l.8-5.522h-.2l-3.688 5.02-1.694-.2 1-7.028 1.1.1-.7 5.522h.2l3.688-5.02 1.595.2-.9 7.028zM35.776 5.927l-1.794.6.8 2.611-1.2.3-2.092-6.824 2.99-.9c1.495-.5 2.591 0 2.99 1.305.399 1.402-.199 2.406-1.694 2.908zm.6-2.41c-.2-.7-.7-1-1.694-.7l-1.694.5.7 2.209 1.694-.5c.992-.303 1.191-.805.992-1.508zM22.321 17.173l-4.884-5.121 3.488-3.514.8.8-2.691 2.611 4.186 4.418zm-.4 47.091H0v-1.908h10.162V23.9h-1.2L0 30.126v-2.812l8.87-6.225h3.688v41.267h9.368v1.908zm48.835.2l4.286 4.318 1.595-1.607.7.7L73.349 72l-.7-.7 1.495-1.707-4.285-4.217zm6.578-10.041l5.183 1.908.1-.3-4.186-4.619.6-1.607 6.677 2.41-.4 1.1-5.183-1.908-.1.2 4.186 4.719-.6 1.606-6.677-2.51zm9.667-.4l-.3.8a.842.842 0 0 0-1 .6.815.815 0 0 0 .4 1.1l-.3.9a1.844 1.844 0 0 1 1.199-3.4z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-mute" viewBox="0 0 10.5 14.5">
+          <path
+            stroke="#000"
+            fill="none"
+            d="M3.5 9.499h-3v-5h3l6-4v13l-6-4z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-pause" viewBox="0 0 7 13">
+          <path
+            fill-rule="evenodd"
+            d="M6 13V-.001h1V13H6zM0-.001h1V13H0V-.001z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-play" viewBox="0 0 11.5 14.5">
+          <path
+            stroke="#000"
+            fill="none"
+            d="M10.5 6.999l-10 6.5V.5l10 6.499z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-play_lg" viewBox="0 0 17.5 22.5">
+          <path
+            stroke="#000"
+            fill="none"
+            d="M16.5 10.999l-16 10.5V.5l16 10.499z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-plus" viewBox="0 0 9 9">
+          <path d="M9 5H5v4H4V5H0V4h4V0h1v4h4v1z"></path>
+        </symbol>
+
+        <symbol id="icon-pyramid" viewBox="0 0 370 362">
+          <path
+            d="M344.339 91L185 361.016 25.66 91H344.34z"
+            stroke="#000"
+            fill="transparent"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M94.522 208.78L185 361.574l90.477-152.794H94.523z"
+            fill="#000"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-scroll" viewBox="0 0 40.906 40.969">
+          <path
+            d="M39.462 28.393l-1.158-.245.576-2.724-6.733-1.423.281-1.331 6.733 1.423.579-2.74 1.158.245-1.436 6.795zM26.274 13.492l4.173-.99 3.872-7.096.86 1.176-2.834 5.126.236.323 5.612-1.328.841 1.149-11.948 2.751-.812-1.111zm-5.199-5.011c-1.278-.047-2.012-.57-2.422-1.161l-.352-.013-.148 4.061-1.359-.05.41-11.253 1.311.048-.031.863.351.013c.468-.544 1.27-1.027 2.549-.98 2.222.081 3.465 1.983 3.378 4.365-.088 2.429-1.465 4.188-3.687 4.107zm-.038-7.3c-1.79-.065-2.579 1.378-2.637 2.961-.057 1.582.624 3.08 2.415 3.145 1.614.059 2.523-1.173 2.589-2.963.065-1.79-.752-3.084-2.367-3.143zm-5.61 38.71l-.477 1.084-6.359-2.8.478-1.085 2.549 1.123 2.775-6.3 1.245.549-2.774 6.3 2.563 1.129zM7.918 10.227l-1.511 1.884 2.769 2.221-.85 1.061-6.288-5.043.851-1.061 2.595 2.082 1.531-1.909L5.47 6.071l.891-1.111 1.801 3.966 4.556.99-.91 1.135-3.89-.824zm-4.77 11.934l1.85 5.862c1.817-.624 2.656-1.795 2.155-3.383-.342-1.084-1.002-1.58-1.807-1.578l-.414-1.313c1.39-.17 2.749.627 3.351 2.535.756 2.396-.576 4.294-2.942 5.04-2.366.747-4.402-.121-5.139-2.457-.722-2.289.625-3.923 2.504-4.566l.442-.14zm-1.807 4.38c.439 1.389 1.519 1.888 2.549 1.747l-1.402-4.442c-.953.385-1.556 1.398-1.147 2.695zm25.243 11.92l.314-.16.36-7.194 1.709-.875 3.674 7.177-1.182.605-2.843-5.553-.313.16-.304 7.164-1.765.904-3.675-7.176 1.182-.605 2.843 5.553z"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-telegram" viewBox="">
+          <circle cx="20" cy="20" r="20"></circle>
+          <path
+            d="M9.336 20.151l4.378 1.68 1.694 5.6a.51.51 0 0 0 .819.253l2.44-2.044a.713.713 0 0 1 .887-.026l4.402 3.284a.512.512 0 0 0 .808-.32l3.225-15.939c.083-.411-.31-.754-.691-.602L9.33 19.159c-.443.176-.439.821.006.992zm5.799.786l8.556-5.416c.154-.097.312.117.18.243l-7.061 6.745a1.518 1.518 0 0 0-.454.9l-.24 1.832c-.032.245-.367.269-.432.032l-.925-3.34a.897.897 0 0 1 .376-.996z"
+            fill="#fff"
+          ></path>
+        </symbol>
+
+        <symbol id="icon-video_full" viewBox="0 0 13 13">
+          <path
+            fill-rule="evenodd"
+            d="M12 12.999H9v-1h3v-3h1v4h-1zm0-12H9v-1h4v4h-1v-3zm-12 12v-4h1v3h3v1H0zm1-9H0v-4h4v1H1v3z"
+          ></path>
+        </symbol>
+      </svg>
+
+      <div class="cursor-overlay">
+        <div id="cursor" class="cursor">
+          <svg class="icon icon--arrows cursor__arrows">
+            <use xlink:href="#icon-arrows"></use>
+          </svg>
+        </div>
+        <div id="cursor-tail-wrap" style="display: none;"></div>
+      </div>
+
+      <header class="header container container--mobile">
+        <div class="header__col header__logo-box header-logo">
+			<img src="logo.png">
+
+        </div>
+
+        <nav class="header__col header__nav">
+          <ul class="header-menu">
+            <li class="header-menu__item">
+              <a href="">об iqos</a>
+            </li>
+
+            <li class="header-menu__item">
+              <a href="">доставка</a>
+            </li>
+
+            <li class="header-menu__item">
+              <a href="">контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__col header__aside">
+          <ul class="header-menu header-menu-aside">
+            <li class="header-menu-aside__item">
+              <button
+                type="button"
+                data-href="#popup-write-us"
+                data-popup="open"
+				style="
+    padding: 10px;
+    border: 1px solid;
+"
+              >
+                тест-драйв
+              </button>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="header__col header__menu-mobile">
+          <button
+            type="button"
+            data-href="#popup-menu-mobile"
+            data-popup="open"
+          >
+            Меню
+          </button>
+        </div>
+      </header>
+
+      <div class="page-content page-main js-main">
+        <main
+          class="page-main__benefits-section js-main-benefits js-sticky-container"
+        >
+          <!-- nbsp нужен для IE, чтобы контейнер не оставался "пустой"" при фиксации блока -->
+          &nbsp;
+          <div
+            class="page-main__benefits-container js-main-benefits-container js-sticky-block is-main"
+            data-breakpoint="1280"
+          >
+            <div class="page-main__benefits-wrapper">
+              <ul
+                class="benefits-list page-main__benefits-list carousel carousel--benefits js-carousel js-main-carousel"
+                data-autoplay
+              >
+                <li class="benefit benefits-list__item">
+                  <div class="benefit__container">
+
+						<img src="1.png">
+						<div class="buy__button">
+							<a href="" class="buy__button-a">
+								купить
+							</a>
+						</div>
+                  </div>
+                </li>
+                <li class="benefit benefits-list__item">
+                  <div class="benefit__container">
+						<img src="2.png">
+
+							<a href="" class="buy__button-a">
+								купить
+							</a>
+                  </div>
+                </li>
+                <li class="benefit benefits-list__item">
+                  <div class="benefit__container">
+						<img src="3.png">
+
+							<a href="" class="buy__button-a">
+								купить
+							</a>
+                  </div>
+                </li>				
+              </ul>
+
+            </div>
+          </div>
+        </main>
+        <aside class="page-main__cases-section js-main-cases">
+          <ul class="cases-list ">
+            <li class="case cases-list__item">
+              <a href="" class="case__link">
+                <picture class="case__pic-bg">
+                  <source
+                    type="image/webp"
+                    data-srcset="11.png"
+                    srcset="11.png"
+                  />
+                  <source
+                    type="image/jpeg"
+                    data-srcset="11.png"
+                    srcset="11.png"
+                  />
+                  <img
+                    class="case__pic"
+                    src="11.png"
+                    alt=""
+                  />
+                </picture>
+                <h2 class="case__title link">IQOS 2.4 Plus</h2>
+              </a>
+            </li>
+            <li class="case cases-list__item">
+              <a href="" class="case__link">
+                <picture class="case__pic-bg">
+                  <source
+                    type="image/webp"
+                    data-srcset="22.png"
+                    srcset="22.png"
+                  />
+                  <source
+                    type="image/jpeg"
+                    data-srcset="22.png"
+                    srcset="22.png"
+                  />
+                  <img
+                    class="case__pic"
+                    src="22.png"
+                    alt=""
+                  />
+                </picture>
+                <h2 class="case__title link">IQOS 3.0</h2>
+              </a>
+            </li>
+            <li class="case cases-list__item">
+              <a href="" class="case__link">
+                <picture class="case__pic-bg">
+                  <source
+                    type="image/webp"
+                    data-srcset="33.png"
+                    srcset="33.png"
+                  />
+                  <source
+                    type="image/jpeg"
+                    data-srcset="33.png"
+                    srcset="33.png"
+                  />
+                  <img
+                    class="case__pic"
+                    src="33.png"
+                    alt=""
+                  />
+                </picture>
+                <h2 class="case__title link">IQOS 3.0 MULTI</h2>
+              </a>
+            </li>
+            <li class="case cases-list__item">
+              <a href="" class="case__link">
+                <picture class="case__pic-bg">
+                  <source
+                    type="image/webp"
+                    data-srcset="44.png"
+                    srcset="44.png"
+                  />
+                  <source
+                    type="image/jpeg"
+                    data-srcset="44.png"
+                    srcset="44.png"
+                  />
+                  <img
+                    class="case__pic"
+                    src="44.png"
+                    alt=""
+                  />
+                </picture>
+                <h2 class="case__title link">Табачные стики</h2>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <div style="display:none" id="scroll-to-div"></div>
+        <section
+          id="ui-kit-loading"
+          class="ui-kit-section pb-0"
+          style="display: none;"
+        >
+          <div class="container"></div>
+          <div class="loading">
+            <div class="loading__dot"></div>
+            <div class="loading__dot"></div>
+            <div class="loading__dot"></div>
+          </div>
+          <br /><br />
+        </section>
+        <section class="footer__box">
+          <div class="footer__container">
+            <p class="footer__text">
+              <a href="tel:8(800)250-08-90">8(800)250-08-90</a>
+            </p>
+
+
+
+            <ul class="footer-soc">
+              <li class="footer-soc__item">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <span class="footer-soc__lg">Facebook</span>
+                  <span class="footer-soc__sm">Fb</span>
+                </a>
+              </li>
+              <li class="footer-soc__item">
+                <a href="https://vk.com" target="_blank">
+                  <span class="footer-soc__lg">ВКонтакте</span>
+                  <span class="footer-soc__sm">Vk</span>
+                </a>
+              </li>
+              <li class="footer-soc__item">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                >
+                  <span class="footer-soc__lg">Instagram</span>
+                  <span class="footer-soc__sm">Inst</span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+        </section>
+        <section class="footer__box footer__box--mobile-flex">
+          <div
+            class="footer__container footer__container--bottom footer__container--last"
+          >
+          </div>
+        </section>
+      </footer>
+
+      <!-- Попапы -->
+
+      <div
+        id="popup-menu-mobile"
+        class="popup popup--aside popup--menu"
+        data-aside="true"
+        data-animation="push-left"
+        data-breakpoint="1024"
+        data-time="200"
+        data-wrap-class="fancybox-wrap--aside-left"
+        style="display: none;"
+      >
+        <div class="popup__head header container container--mobile">
+          <div class="header__col header__logo-box header-logo">
+            <a
+              class="header-logo__link"
+              href="index.html"
+              title="Перейти на главную"
+            >
+            <img src="logo.png">
+            </a>
+          </div>
+          <div class="header__col header__menu-mobile">
+            <button type="button" data-popup="close">Закрыть</button>
+          </div>
+        </div>
+        <div class="popup__body container container--mobile menu-mobile">
+          <ul class="menu-mobile__top">
+            <li>
+              <button
+                type="button"
+                data-href="#popup-write-us"
+                data-popup="open"
+				style="
+    padding: 10px;
+    border: 1px solid;"
+              >
+                тест-драйв
+              </button>
+            </li>
+          </ul>
+          <ul class="menu-mobile__main">
+            <li><a href="">Об iqos</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
+
+          </ul>
+
+          <ul class="menu-mobile__socials">
+            <li>
+              <a href="https://www.facebook.com/" target="_blank"
+                >Fb</a
+              >
+            </li>
+            <li>
+              <a href="https://vk.com" target="_blank">Vk</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        id="popup-privacy-policy"
+        class="popup popup--aside popup--half privacy-policy"
+        data-aside="true"
+        data-wrap-class="fancybox-wrap--aside-right"
+        data-breakpoint="1024"
+        style="display: none;"
+      >
+        <div class="privacy-policy__head privacy-policy__container popup__head">
+          <button type="button" data-popup="close">Назад</button>
+        </div>
+
+      </div>
+      <div
+        id="popup-write-us"
+        class="popup popup--aside popup--half write-us"
+        data-aside="true"
+        data-animation="push-right"
+        data-wrap-class="fancybox-wrap--aside-right"
+        data-breakpoint="1024"
+        style="display: none;"
+      >
+        <div class="write-us__head popup__head write-us__container">
+          <h4 class="write-us__title">
+            <span for="write-us-name">Запишитесь на бесплатный тест-драйв устройства</span>
+          </h4>
+
+          <button class="write-us__btn" type="button" data-popup="close">
+            Закрыть
+          </button>
+        </div>
+
+        <div class="write-us__body popup__body write-us__container">
+          <form
+            class="write-us__form"
+            name="write-us"
+            id="write-us"
+            action="index.html"
+            data-validate="true"
+            enctype="multipart/form-data"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="sessid"
+              id="sessid"
+              value="be53cca2c21b21bec88d449a34c3bb10"
+            />
+            <div class="field">
+              <label for="write-us-name">Как вас зовут</label>
+              <input
+                id="write-us-name"
+                type="text"
+                name="write-us-name"
+                value=""
+                placeholder="Представьтесь, пожалуйста"
+                data-parsley-name
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="write-us__email">Email</label>
+              <input
+                id="write-us__email"
+                type="email"
+                name="write-us__email"
+                value=""
+                placeholder="ivanov@mail.ru"
+                data-parsley-email
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="write-us__tel">Телефон</label>
+              <input
+                id="write-us__tel"
+                class="js-phone-mask"
+                type="tel"
+                name="write-us__tel"
+                value=""
+                placeholder="+7(926) 123-45-67"
+                data-parsley-phone
+              />
+            </div>
+
+            <div class="field">
+              <label for="write-us__textarea"></label>
+              <textarea
+                name="write-us__textarea"
+                id="write-us__textarea"
+                rows="1"
+                placeholder="Удобное время и место встречи"
+                required
+              ></textarea>
+            </div>
+
+
+
+
+
+            <input
+              type="hidden"
+              id="page-input"
+              name="page"
+              value=""
+            />
+            <input type="hidden" id="hidden-input" name="secret_input" />
+
+            <button
+              id="send-form-button"
+              class="btn write-us__send js-write-us-btn"
+              type="submit"
+            >
+              <span class="write-us__send-text js-write-us-btn-text"
+                >Отправить</span
+              >
+              <div class="loading is-hidden">
+                <div class="loading__dot"></div>
+                <div class="loading__dot"></div>
+                <div class="loading__dot"></div>
+              </div>
+            </button>
+            <div id="old-name" style="display: none">Отправить</div>
+            <p id="error-message" style="color: red; display: none;"></p>
+          </form>
+        </div>
+      </div>
+      <!-- Попапы -->
+
+      <script>
+        $.ajaxSetup({
+          data: { csrf_token: "be53cca2c21b21bec88d449a34c3bb10" },
+          beforeSend: function(xhr, settings) {
+            if (settings.url.startsWith("/api/")) {
+              xhr.setRequestHeader("X-Language-Id", "ru");
+            }
+          }
+        });
+      </script>
+      <script src="assets/build/js/external.js?v=1007"></script>
+      <script src="assets/build/js/internal.js?v=1007"></script>
+    </body>
+  </html>
+</html>
+
+
+
+
+
+
+
+
+
